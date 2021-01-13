@@ -1,0 +1,13 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullMax="200">
+    <ion-refresher-content
+      pullingIcon="arrow-down-circle-outline"
+      refreshingSpinner="lines"
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ng-container *ngFor="let item of items">
+    <div class="item">{{ item }}</div>
+  </ng-container>
+</ion-content>
